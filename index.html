@@ -1,677 +1,675 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-	<title>Mathéo Roure</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-
-	<link rel="stylesheet" href="css/aos.css">
-
-	<link rel="stylesheet" href="css/ionicons.min.css">
-
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional ePortfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1', // Indigo 500
+                        dark: '#0f172a', // Slate 900
+                        darker: '#020617', // Slate 950
+                        card: '#1e293b', // Slate 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
 </head>
+<body class="bg-darker text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md shadow-sm transition-all duration-300 border-b border-white/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight">My<span class="text-primary">Portfolio</span>.</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="#home" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Home</a>
+                    <a href="#about" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">About</a>
+                    <a href="#skills" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Skills</a>
+                    <a href="#civic" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Civic</a>
+                    <a href="#mobility" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Mobility</a>
+                    <a href="#hobbies" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Hobbies</a>
+                    <a href="#projects" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Projects</a>
+                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20 transform hover:-translate-y-0.5 text-sm">Contact Me</a>
+                </div>
 
-
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">Mathéo Roure</a>
-			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
-
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-					<li class="nav-item"><a href="#services-section" class="nav-link"><span>Civic engagement</span></a></li>
-					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My hobbies</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<section id="home-section" class="hero">
-		<div class="home-slider  owl-carousel">
-			<div class="slider-item">
-				<div class="overlay"></div>
-				<div class="container">
-					<div class="row d-flex no-gutters slider-text align-items-end justify-content-end"
-						data-scrollax-parent="true">
-						<div class="one-third js-fullheight order-md-last img"
-							style="background-image:url(images/bg_2.png);">
-							<div class="overlay"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate"
-							data-scrollax=" properties: { translateY: '70%' }">
-							<div class="text">
-								<span class="subheading">Hello!</span>
-								<h1 class="mb-4 mt-3">I'm a <span>Computer science student engineer</span> based in
-									Toulouse</h1>
-								<p><a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My projects</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-		<div class="container">
-			<div class="row d-flex">
-				<div class="col-md-6 col-lg-5 d-flex">
-					<div class="img-about img d-flex align-items-stretch">
-						<div class="overlay"></div>
-						<div class="img d-flex align-self-stretch align-items-center"
-							style="background-image:url(images/bg_1.png);">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-					<div class="row justify-content-start pb-3">
-						<div class="col-md-12 heading-section ftco-animate">
-							<h1 class="big">About</h1>
-							<h2 class="mb-4">About Me</h2>
-							<p>Student at ENSEEIHT following the engineering course in Digital Sciences.</p>
-							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Name:</span> <span>Mathéo Roure</span></li>
-								<li class="d-flex"><span>Date of birth:</span> <span>April 13, 2002</span></li>
-								<li class="d-flex"><span>Address:</span> <span>Toulouse, France</span></li>
-								<li class="d-flex"><span>Zip code:</span> <span>31 000</span></li>
-								<li class="d-flex"><span>Email:</span> <span><a
-											href="mailto:matheo.roure@etu.imp-n7.fr">matheo.roure@etu.imp-n7.fr</a></span>
-								</li>
-								<li class="d-flex"><span>Phone: </span> <span><a href="tel:+33760573963">+33 7 60 57 39
-											63</a></span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="counter-wrap ftco-animate d-flex mt-md-3">
-						<div class="text">
-							<p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="ftco-section ftco-no-pb" id="resume-section">
-		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-10 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Resume</h1>
-					<h2 class="mb-4">Resume</h2>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-						is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2022-</span>
-						<h2>Master's level engineering degree</h2>
-						<span class="position">ENSEEIHT</span>
-						<p class="mt-4">A small river named Duden flows by their place and supplies it with the
-							necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-							into your mouth.</p>
-					</div>
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2020-2022</span>
-						<h2>"Prépa des INP"</h2>
-						<span class="position">Lislet Geoffroy</span>
-						<p class="mt-4">Intensive undergraduate course leading to French graduate Schools.</p>
-					</div>
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2017-2020</span>
-						<h2>Pierre poivre</h2>
-						<span class="position">High school </span>
-						<p class="mt-4">A small river named Duden flows by their place and supplies it with the
-							necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly
-							into your mouth.</p>
-					</div>
-				</div>
-
-			</div>
-			<div class="row justify-content-center mt-5">
-				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="ftco-section" id="services-section">
-    	<div class="container">
-    		<div class="row justify-content-center py-5 mt-5">
-          <div class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
-          	<h1 class="big big-2">Civic engagement</h1>
-            <h2 class="mb-4">Civic engagement</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-		  <div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="http://www.despontsalaplacedesmurs.com/Th%C3%A9%C3%A2tre-interactif.html" class="block-20" style="background-image: url('images/king\ kong.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">Interactive theatre piece</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="http://www.despontsalaplacedesmurs.com/Th%C3%A9%C3%A2tre-interactif.html">"Le procès de King-Kong"</a>
-							</h3>
-							<p>We are faced with three cases in which the guilty parties think they are the victims, but even worse, the victims think they are guilty. Axel, Alex and Omar have experienced three crazy integration evenings in their new school.An action that aims to fight against sexist and/or sexual violence wherever it is found! </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="https://fresqueduclimat.org/" class="block-20" style="background-image: url('images/fresque-climat.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">Training on sustainable development</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="https://fresqueduclimat.org/">"La fresque-du-climat"</a>
-							</h3>
-							<p>The Fresco raises awareness without making people feel guilty. Through a shared understanding of the mechanisms at work, it enables individuals and organisations to create a calm and positive collective discussion on the levers for action.
-
-								Participants leave the workshop united, motivated and equipped to create solutions within their reach.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
-						<a href="https://www.unss.org/jeunes-officiels" class="block-20" style="background-image: url('images/Officiel.png');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">3 years</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="https://www.unss.org/jeunes-officiels">"Jeune Officiel"</a>
-							</h3>
-							<p>Volunteer refereeing for sports events organised at the college.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
 
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-card border-t border-slate-700">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">About</a>
+                <a href="#skills" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Skills</a>
+                <a href="#civic" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Civic Engagement</a>
+                <a href="#mobility" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Int. Mobility</a>
+                <a href="#hobbies" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Hobbies</a>
+                <a href="#projects" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Projects</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-primary font-bold hover:bg-slate-700 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-darker">
+        <!-- Background Gradients -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden z-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center md:text-left grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="fade-in order-2 md:order-1">
+                    <span class="inline-block py-1 px-3 rounded-full bg-indigo-900/50 border border-indigo-500/30 text-indigo-300 text-sm font-semibold mb-4">Curious and Motivated</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
+                        Hi, I am <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Mathéo</span><br>
+                        Software Engineer
+                    </h1>
+                    <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Engineering student at ENSEEIHT and AI Developer apprentice at Sopra Steria. I am passionate about orienting my career towards Artificial Intelligence.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#projects" class="px-8 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg shadow-indigo-500/25 hover:bg-indigo-600 transition transform hover:-translate-y-1">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="px-8 py-3 rounded-lg bg-transparent border border-slate-600 text-white font-semibold hover:bg-slate-800 transition">
+                            Download CV
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center justify-center md:justify-start space-x-6 text-slate-500">
+                        <a href="https://github.com/Femard" class="hover:text-primary transition text-2xl"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mathéo-roure-15ab08232/" class="hover:text-primary transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-primary transition text-2xl"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="relative lg:h-full flex justify-center fade-in order-1 md:order-2 mb-8 md:mb-0" style="transition-delay: 200ms;">
+                    <!-- Decor Circles -->
+                    <div class="absolute w-72 h-72 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob top-0 -left-4"></div>
+                    <div class="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000 bottom-0 -right-4"></div>
+                    
+                    <!-- Profile Image -->
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-indigo-500/20">
+                        <img src="/images/me.png" alt="Profile Photo" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-	<section class="ftco-section" id="skills-section">
-		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Skills</h1>
-					<h2 class="mb-4">My Skills</h2>
-					<p>my language and programming skills</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>French</h3>
-						<div class="progress">
-							<div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-								aria-valuemax="100" style="width:100%">
-								<span>100%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>HTML5</h3>
-						<div class="progress">
-							<div class="progress-bar color-3" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-								aria-valuemax="100" style="width:40%">
-								<span>40%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>English</h3>
-						<div class="progress">
-							<div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-								aria-valuemax="100" style="width:70%">
-								<span>70%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>CSS3</h3>
-						<div class="progress">
-							<div class="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-								aria-valuemax="100" style="width:45%">
-								<span>45%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Spanish</h3>
-						<div class="progress">
-							<div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-								aria-valuemax="100" style="width:60%">
-								<span>60%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Python</h3>
-						<div class="progress">
-							<div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-								aria-valuemax="100" style="width:60%">
-								<span>60%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Chinese</h3>
-						<div class="progress">
-							<div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-								aria-valuemax="100" style="width:40%">
-								<span>40%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 animate-box">
-					<div class="progress-wrap ftco-animate">
-						<h3>Mathlab</h3>
-						<div class="progress">
-							<div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-								aria-valuemax="100" style="width:30%">
-								<span>30%</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-white">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            </div>
 
-	<section class="ftco-section ftco-project" id="projects-section">
-		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Projects</h1>
-					<h2 class="mb-4">My Projects</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/project-4.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">CPP-connect</a></h3>
-							<span>Web Design</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/project-5.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Solver equation diff</a></h3>
-							<span>Python</span>
-						</div>
-					</div>
-				</div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-indigo-500 rounded-xl blur-lg opacity-20 transform rotate-2"></div>
+                        <img src="/images/enseeiht.jpg" alt="Workspace" class="relative rounded-xl shadow-lg w-full object-cover h-80 grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+                <div class="fade-in" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-bold text-white mb-4">My Journey</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        I am currently an engineering student at <strong><a class="text-primary hover:text-indigo-400" href="https://www.enseeiht.fr/fr/index.html">ENSEEIHT</a></strong>, working as an apprentice AI Developer at <strong> <a class="text-primary hover:text-indigo-400" href="https://www.soprasteria.fr/">Sopra Steria</a></strong>. My academic and professional path is driven by a strong desire to specialize in the field of Artificial Intelligence.
+                    </p>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        Curious and motivated, I constantly seek to expand my knowledge in algorithmics and data processing to solve complex problems.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-4 bg-card rounded-lg border border-slate-700">
+                            <span class="block text-3xl font-bold text-primary">Student</span>
+                            <span class="text-sm text-slate-400">@ ENSEEIHT</span>
+                        </div>
+                        <div class="p-4 bg-card rounded-lg border border-slate-700">
+                            <span class="block text-3xl font-bold text-primary">4+</span>
+                            <span class="text-sm text-slate-400">Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="col-md-12">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/project-1.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Log-0</a></h3>
-							<span>Apply</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-8">
-					<div class="row">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-white">My Skills</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">The tools and technologies I use to bring projects to life.</p>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- AI & Data -->
+                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-primary/50 transition fade-in">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center text-indigo-400 mb-6">
+                        <i class="fas fa-brain text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">AI & Data</h3>
+                    <p class="text-slate-400 text-sm mb-4">Currently focusing on RAG (Retrieval-Augmented Generation) architectures.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">RAG</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Machine Learning</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Scikit Learn</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Pandas</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Pytorch</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">TensorFlow</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Hugging Face</span>
+                    </div>
+                </div>
 
-	<section class="ftco-section" id="blog-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Hobbies</h1>
-					<h2 class="mb-4">My hobbies</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-				</div>
-			</div>
-			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">More than 10 years</span>
-								</p>
-							</div>
-							<h3 class="heading"><a href="single.html">Basket Ball</a>
-							</h3>
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">June 21, 2019</span>
-									<a href="#" class="mr-2">Admin</a>
-									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-								</p>
-							</div>
-							<h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a>
-							</h3>
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">June 21, 2019</span>
-									<a href="#" class="mr-2">Admin</a>
-									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-								</p>
-							</div>
-							<h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a>
-							</h3>
-							<p>A small river named Duden flows by their place and supplies it with the necessary
-								regelialia.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                <!-- Languages -->
+                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-green-500/50 transition fade-in" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400 mb-6">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Programming</h3>
+                    <p class="text-slate-400 text-sm mb-4">Versatile in multiple programming paradigms.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Java</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">C</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">TypeScript</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Python</span>                        
+                    </div>
+                </div>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-		<div class="container">
-			<div class="row d-md-flex align-items-center">
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18">
-						<div class="text">
-							<strong class="number" data-number="100">0</strong>
-							<span>Awards</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18">
-						<div class="text">
-							<strong class="number" data-number="1200">0</strong>
-							<span>Complete Projects</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18">
-						<div class="text">
-							<strong class="number" data-number="1200">0</strong>
-							<span>Happy Customers</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-					<div class="block-18">
-						<div class="text">
-							<strong class="number" data-number="500">0</strong>
-							<span>Cups of coffee</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                <!-- Tools -->
+                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-purple-500/50 transition fade-in" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-6">
+                        <i class="fas fa-tools text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                    <p class="text-slate-400 text-sm mb-4">Development workflow and version control.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Git / GitHub</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">VS Code</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Linux</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Jupyter</span>
+                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>I'm <span>Available</span> for freelancing</h2>
-					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Civic Engagement -->
+    <section id="civic" class="py-20 bg-darker border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-white">Civic Engagement</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Committed to making a positive impact in my community through arts, sustainability, and sports.</p>
+            </div>
 
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Contact</h1>
-					<h2 class="mb-4">Contact Me</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-				</div>
-			</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Experience 1: Theatre -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mr-4 group-hover:scale-110 transition">
+                            <i class="fas fa-masks-theater text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white leading-tight">"Le procès de King-Kong"</h3>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Interactive Theatre</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        An action aimed at fighting against sexist and sexual violence. The play explores cases where perceptions of guilt are blurred. We portrayed the stories of Axel, Alex, and Omar during integration evenings to raise awareness.
+                    </p>
+                    <a href="https://welcomedesk.univ-toulouse.fr/evenements/proces-king-kong-theatre-interactif-sur-vss" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
 
-			<div class="row d-flex contact-info mb-5">
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box p-4 text-center">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-map-signs"></span>
-						</div>
-						<h3 class="mb-4">Address</h3>
-						<p>198 West 21th Street, Suite 721 New York NY 10016</p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box p-4 text-center">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-phone2"></span>
-						</div>
-						<h3 class="mb-4">Contact Number</h3>
-						<p><a href="tel://1234567920">+ 1235 2355 98</a></p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box p-4 text-center">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-paper-plane"></span>
-						</div>
-						<h3 class="mb-4">Email Address</h3>
-						<p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box p-4 text-center">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-globe"></span>
-						</div>
-						<h3 class="mb-4">Website</h3>
-						<p><a href="#">yoursite.com</a></p>
-					</div>
-				</div>
-			</div>
+                </div>
 
-			<div class="row no-gutters block-9">
-				<div class="col-md-6 order-md-last d-flex">
-					<form action="#" class="bg-light p-4 p-md-5 contact-form">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Name">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Your Email">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Subject">
-						</div>
-						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="7" class="form-control"
-								placeholder="Message"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-						</div>
-					</form>
+                <!-- Experience 2: Climate Fresk -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full" style="transition-delay: 100ms;">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 mr-4 group-hover:scale-110 transition">
+                            <i class="fas fa-leaf text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white leading-tight">"La Fresque du Climat"</h3>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Sustainability Training</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        The Fresco raises awareness without guilt. Through shared understanding of climate mechanisms, it fosters calm, collective discussions on actionable levers. Participants leave the workshop united and motivated.
+                    </p>
+                    <a href="https://fresqueduclimat.org/" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                </div>
 
-				</div>
+                <!-- Experience 3: Jeune Officiel -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full" style="transition-delay: 200ms;">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 mr-4 group-hover:scale-110 transition">
+                            <i class="fas fa-flag-checkered text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white leading-tight">"Jeune Officiel"</h3>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">3 Years • Volunteering</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        Served as a volunteer referee for various sports events organised at the college level. Developed responsibility, impartiality, and decision-making skills in fast-paced environments.
+                    </p>
+                    <a href="https://www.unss.org/" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                </div>
+                <!-- Experience 4: Capitol du libre -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 mr-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white leading-tight">"Capitol du libre"</h3>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Volunteering</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        I have filmed and edited conferences on open-source software and more broadly, anything that can be open within the digital domain, whether it's hardware or intellectual property.
+                    </p>
+                    <a href="https://capitoledulibre.org/" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                </div>
+                <!-- Experience 4: Women7 -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden" style="transition-delay: 100ms;">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mr-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-person-dress"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white leading-tight">"Women7"</h3>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Volunteering</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        Film made during a day organized for middle school girls to raise awareness about the engineering profession. With women being underrepresented in this field, the aim is to show them how fascinating it can be.
+                    </p>
+                    <a href="https://www.enseeiht.fr/fr/actualites/women7.html" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
 
-				<div class="col-md-6 d-flex">
-					<div class="img" style="background-image: url(images/about.jpg);"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+                </div>
+                <!-- Experience 3: GivMe  -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden" style="transition-delay: 200ms;">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center text-yellow-400 mr-4 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-children"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white leading-tight">"GivMe"</h3>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Volunteering</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed flex-grow">
+                        We set up a live stream and a control room with 6 cameras for a charity concert organized for children with mitochondrial disease.
+                    </p>
+                    <a href="https://www.enseeiht.fr/fr/actualites/women7.html" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
 
+                </div>
 
-	<footer class="ftco-footer ftco-section">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">About</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4 ml-md-4">
-						<h2 class="ftco-heading-2">Links</h2>
-						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Services</h2>
-						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Have a Questions?</h2>
-						<div class="block-23 mb-3">
-							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain
-										View, San Francisco, California, USA</span></li>
-								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
-											210</span></a></li>
-								<li><a href="#"><span class="icon icon-envelope"></span><span
-											class="text">info@yourdomain.com</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 text-center">
+            </div>
+            <div class="text-center mt-8">
+                <button id="show-more-civic" class="px-6 py-3 bg-primary text-white rounded-full hover:bg-indigo-600 transition">Show More +</button>
+            </div>
+        </div>
+    </section>
 
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <!-- Mobility Section -->
+    <section id="mobility" class="py-20 bg-dark relative overflow-hidden">
+        <!-- World Map Background Effect (Abstract) -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+            <i class="fas fa-globe-americas text-[40rem] text-white absolute -right-40 top-10"></i>
+        </div>
 
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-white">International Mobility</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Exploring the world, adapting to new cultures, and expanding horizons.</p>
+                
+            </div>
 
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300">
+                    <div class="inline-block p-3 rounded-full bg-orange-500/20 text-orange-400 mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-plane-departure text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Australia (1 Year)</h3>
+                    <p class="text-slate-400 text-sm">Worked in gold mines and completed an internship at <strong>Knowz</strong>. Adapted to a new environment and work culture.</p>
+                </div>
 
-	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" />
-		</svg></div>
+                <!-- Card 2 -->
+                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300" style="transition-delay: 100ms;">
+                    <div class="inline-block p-3 rounded-full bg-teal-500/20 text-teal-400 mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-language text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Languages</h3>
+                    <ul class="text-slate-400 text-sm space-y-1">
+                        <li><span class="text-white">French:</span> Native</li>
+                        <li><span class="text-white">English:</span> B2+</li>
+                        <li><span class="text-white">Spanish:</span> B1</li>
+                    </ul>
+                </div>
 
+                <!-- Card 3 -->
+                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300" style="transition-delay: 200ms;">
+                    <div class="inline-block p-3 rounded-full bg-cyan-500/20 text-cyan-400 mb-4 group-hover:scale-110 transition">
+                        <i class="fas fa-suitcase text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Adaptability</h3>
+                    <p class="text-slate-400 text-sm">Comfortable working in multicultural teams. Strong experience in diverse professional settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
+    <!-- NEW SECTION: Hobbies -->
+    <section id="hobbies" class="py-20 bg-darker border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-white">Interests & Hobbies</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Fueling creativity and balance outside of work.</p>
+            </div>
 
-	<script src="js/main.js"></script>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hobby 1 -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group">
+                    <div class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
+                        <i class="fas fa-basketball-ball text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-lg font-bold text-white">Basketball</h3>
+                        <p class="text-slate-400 text-sm mt-1">15+ years of competition. Learned teamwork, discipline, and leadership.</p>
+                    </div>
+                </div>
 
+                <!-- Hobby 2 -->
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
+                        <i class="fas fa-plane text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-lg font-bold text-white">Travel</h3>
+                        <p class="text-slate-400 text-sm mt-1">Explored Taiwan, Japan, Cameroon, Australia, Thailand... Passionate about discovering new cultures.</p>
+                    </div>
+                </div>
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-lg font-bold text-white">Video Editing</h3>
+                        <p class="text-slate-400 text-sm mt-1">I was vice president of the school's video editing club, and I developed a passion for storytelling through visual media.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-darker border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-white">Selected Projects</h2>
+                <p class="mt-4 text-slate-400">A selection of my recent work.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <article class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/600x400/333/fff?text=RAG+Chatbot" alt="Project 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-primary uppercase mb-2 tracking-wider">AI / NLP</div>
+                        <h3 class="text-xl font-bold text-white mb-2">RAG Architecture</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Implementation of a Retrieval-Augmented Generation system using Python.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-slate-700">
+                            <div class="flex space-x-3 text-lg">
+                                <i class="fab fa-python text-yellow-500" title="Python"></i>
+                                <i class="fas fa-brain text-blue-500" title="AI"></i>
+                            </div>
+                            <a href="#" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
+                                View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group" style="transition-delay: 100ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/600x400/4F46E5/fff?text=Java+App" alt="Project 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-primary uppercase mb-2 tracking-wider">Software</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Java Application</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Complex algorithm implementation and data processing in Java.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-slate-700">
+                            <div class="flex space-x-3 text-lg">
+                                <i class="fab fa-java text-orange-500" title="Java"></i>
+                            </div>
+                            <a href="#" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
+                                View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group" style="transition-delay: 200ms;">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
+                        <img src="https://placehold.co/600x400/0f172a/fff?text=Web+Dashboard" alt="Project 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-primary uppercase mb-2 tracking-wider">Web</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Analytics Dashboard</h3>
+                        <p class="text-slate-400 mb-4 text-sm">Frontend visualization using React and TypeScript.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-slate-700">
+                            <div class="flex space-x-3 text-lg">
+                                <i class="fab fa-react text-blue-400" title="React"></i>
+                                <i class="fab fa-js text-yellow-400" title="JavaScript"></i>
+                            </div>
+                            <a href="#" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
+                                View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact -->
+    <section id="contact" class="py-20 bg-dark relative overflow-hidden">
+        <!-- Decoration light -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in relative z-10">
+            <h2 class="text-3xl font-bold mb-4 text-white">Interested in collaborating?</h2>
+            <p class="text-slate-400 mb-10 text-lg">
+                I love discussing AI projects and technical challenges. Feel free to reach out.
+            </p>
+            <div class="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                <form action="mailto:roure.matheo@gmail.com" method="post" enctype="text/plain" class="space-y-6 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition" placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-[1.02] shadow-lg shadow-indigo-500/30">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-12 flex justify-center space-x-8">
+                <a href="mailto:contact@example.com" class="flex items-center text-slate-400 hover:text-white transition">
+                    <i class="fas fa-envelope mr-2"></i> roure.matheo@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; 2025 matheo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('bg-darker/90');
+                nav.classList.add('bg-darker/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('bg-darker/90');
+                nav.classList.remove('bg-darker/95');
+            }
+        });
+
+        document.getElementById('show-more-civic').addEventListener('click', function() {
+            const extras = document.querySelectorAll('.civic-extra');
+            const isHidden = extras[0] && extras[0].classList.contains('hidden');
+            extras.forEach(el => {
+                if (isHidden) {
+                    el.classList.remove('hidden');
+                    // Trigger fade-in
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, 10);
+                } else {
+                    el.classList.add('hidden');
+                    el.classList.remove('visible');
+                }
+            });
+            this.textContent = isHidden ? 'Show Less -' : 'Show More +';
+        });
+
+        document.getElementById('show-more-australia').addEventListener('click', function() {
+            const extras = document.querySelectorAll('.australia-extra');
+            const isHidden = extras[0] && extras[0].classList.contains('hidden');
+            extras.forEach(el => {
+                if (isHidden) {
+                    el.classList.remove('hidden');
+                    // Trigger fade-in
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, 10);
+                } else {
+                    el.classList.add('hidden');
+                    el.classList.remove('visible');
+                }
+            });
+            this.innerHTML = isHidden ? '<i class="fas fa-chevron-up"></i>' : '<i class="fas fa-chevron-down"></i>';
+        });
+    </script>
 </body>
-
 </html>
