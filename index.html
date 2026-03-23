@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -34,47 +35,63 @@
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
             background: #0f172a;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #334155;
             border-radius: 5px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #475569;
         }
     </style>
 </head>
+
 <body class="bg-darker text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md shadow-sm transition-all duration-300 border-b border-white/5" id="navbar">
+    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md shadow-sm transition-all duration-300 border-b border-white/5"
+        id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold text-white tracking-tight">My<span class="text-primary">Portfolio</span>.</a>
+                    <a href="#" class="text-2xl font-bold text-white tracking-tight">My<span
+                            class="text-primary">Portfolio</span>.</a>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex space-x-6 items-center">
-                    <a href="#home" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Home</a>
-                    <a href="#about" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">About</a>
-                    <a href="#skills" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Skills</a>
-                    <a href="#civic" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Civic</a>
-                    <a href="#mobility" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Mobility</a>
-                    <a href="#hobbies" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Hobbies</a>
-                    <a href="#projects" class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Projects</a>
-                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-full hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20 transform hover:-translate-y-0.5 text-sm">Contact Me</a>
+                    <a href="#home"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Home</a>
+                    <a href="#about"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">About</a>
+                    <a href="#skills"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Skills</a>
+                    <a href="#civic"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Civic</a>
+                    <a href="#mobility"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Mobility</a>
+                    <a href="#hobbies"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Hobbies</a>
+                    <a href="#projects"
+                        class="text-slate-300 hover:text-white hover:text-primary transition font-medium text-sm">Projects</a>
+                    <a href="#contact"
+                        class="bg-primary text-white px-4 py-2 rounded-full hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/20 transform hover:-translate-y-0.5 text-sm">Contact
+                        Me</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -89,14 +106,24 @@
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden lg:hidden bg-card border-t border-slate-700">
             <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
-                <a href="#home" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">About</a>
-                <a href="#skills" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Skills</a>
-                <a href="#civic" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Civic Engagement</a>
-                <a href="#mobility" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Int. Mobility</a>
-                <a href="#hobbies" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Hobbies</a>
-                <a href="#projects" class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Projects</a>
-                <a href="#contact" class="block px-3 py-3 text-base font-medium text-primary font-bold hover:bg-slate-700 rounded-md">Contact</a>
+                <a href="#home"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Home</a>
+                <a href="#about"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">About</a>
+                <a href="#skills"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Skills</a>
+                <a href="#civic"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Civic
+                    Engagement</a>
+                <a href="#mobility"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Int.
+                    Mobility</a>
+                <a href="#hobbies"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Hobbies</a>
+                <a href="#projects"
+                    class="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Projects</a>
+                <a href="#contact"
+                    class="block px-3 py-3 text-base font-medium text-primary font-bold hover:bg-slate-700 rounded-md">Contact</a>
             </div>
         </div>
     </nav>
@@ -106,43 +133,58 @@
         <!-- Background Gradients -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden z-0 pointer-events-none">
             <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[100px]"></div>
-            <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center md:text-left grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div class="fade-in order-2 md:order-1">
-                    <span class="inline-block py-1 px-3 rounded-full bg-indigo-900/50 border border-indigo-500/30 text-indigo-300 text-sm font-semibold mb-4">Curious and Motivated</span>
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-indigo-900/50 border border-indigo-500/30 text-indigo-300 text-sm font-semibold mb-4">Curious
+                        and Motivated</span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
-                        Hi, I am <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Mathéo</span><br>
+                        Hi, I am <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Mathéo</span><br>
                         Software Engineer
                     </h1>
                     <p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                        Engineering student at ENSEEIHT and AI Developer apprentice at Sopra Steria. I am passionate about orienting my career towards Artificial Intelligence.
+                        Engineering student at ENSEEIHT and AI Developer apprentice at Sopra Steria. I am passionate
+                        about orienting my career towards Artificial Intelligence.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#projects" class="px-8 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg shadow-indigo-500/25 hover:bg-indigo-600 transition transform hover:-translate-y-1">
+                        <a href="#projects"
+                            class="px-8 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg shadow-indigo-500/25 hover:bg-indigo-600 transition transform hover:-translate-y-1">
                             View My Work
                         </a>
-                        <a href="#contact" class="px-8 py-3 rounded-lg bg-transparent border border-slate-600 text-white font-semibold hover:bg-slate-800 transition">
+                        <a href="#contact"
+                            class="px-8 py-3 rounded-lg bg-transparent border border-slate-600 text-white font-semibold hover:bg-slate-800 transition">
                             Download CV
                         </a>
                     </div>
-                    
+
                     <div class="mt-10 flex items-center justify-center md:justify-start space-x-6 text-slate-500">
-                        <a href="https://github.com/Femard" class="hover:text-primary transition text-2xl"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/mathéo-roure-15ab08232/" class="hover:text-primary transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Femard" class="hover:text-primary transition text-2xl"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mathéo-roure-15ab08232/"
+                            class="hover:text-primary transition text-2xl"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="hover:text-primary transition text-2xl"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
-                <div class="relative lg:h-full flex justify-center fade-in order-1 md:order-2 mb-8 md:mb-0" style="transition-delay: 200ms;">
+
+                <div class="relative lg:h-full flex justify-center fade-in order-1 md:order-2 mb-8 md:mb-0"
+                    style="transition-delay: 200ms;">
                     <!-- Decor Circles -->
-                    <div class="absolute w-72 h-72 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob top-0 -left-4"></div>
-                    <div class="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000 bottom-0 -right-4"></div>
-                    
+                    <div
+                        class="absolute w-72 h-72 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob top-0 -left-4">
+                    </div>
+                    <div
+                        class="absolute w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-blob animation-delay-2000 bottom-0 -right-4">
+                    </div>
+
                     <!-- Profile Image -->
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-indigo-500/20">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-indigo-500/20">
                         <img src="./images/me.png" alt="Profile Photo" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -161,26 +203,34 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
                     <div class="relative">
-                        <div class="absolute inset-0 bg-indigo-500 rounded-xl blur-lg opacity-20 transform rotate-2"></div>
-                        <img src="./images/enseeiht.jpg" alt="Workspace" class="relative rounded-xl shadow-lg w-full object-cover h-80 grayscale hover:grayscale-0 transition duration-500">
+                        <div class="absolute inset-0 bg-indigo-500 rounded-xl blur-lg opacity-20 transform rotate-2">
+                        </div>
+                        <img src="./images/enseeiht.jpg" alt="Workspace"
+                            class="relative rounded-xl shadow-lg w-full object-cover h-80 grayscale hover:grayscale-0 transition duration-500">
                     </div>
                 </div>
                 <div class="fade-in" style="transition-delay: 200ms;">
                     <h3 class="text-2xl font-bold text-white mb-4">My Journey</h3>
                     <p class="text-slate-400 mb-6 leading-relaxed">
-                        I am currently an engineering student at <strong><a class="text-primary hover:text-indigo-400" href="https://www.enseeiht.fr/fr/index.html">ENSEEIHT</a></strong>, working as an apprentice AI Developer at <strong> <a class="text-primary hover:text-indigo-400" href="https://www.soprasteria.fr/">Sopra Steria</a></strong>. My academic and professional path is driven by a strong desire to specialize in the field of Artificial Intelligence.
+                        I am currently an engineering student at <strong><a class="text-primary hover:text-indigo-400"
+                                href="https://www.enseeiht.fr/fr/index.html">ENSEEIHT</a></strong>, working as an
+                        apprentice AI Developer at <strong> <a class="text-primary hover:text-indigo-400"
+                                href="https://www.soprasteria.fr/">Sopra Steria</a></strong>. My academic and
+                        professional path is driven by a strong desire to specialize in the field of Artificial
+                        Intelligence.
                     </p>
                     <p class="text-slate-400 mb-6 leading-relaxed">
-                        Curious and motivated, I constantly seek to expand my knowledge in algorithmics and data processing to solve complex problems.
+                        Curious and motivated, I constantly seek to expand my knowledge in algorithmics and data
+                        processing to solve complex problems.
                     </p>
-                    
+
                     <div class="grid grid-cols-2 gap-4 text-center">
                         <div class="p-4 bg-card rounded-lg border border-slate-700">
                             <span class="block text-3xl font-bold text-primary">Student</span>
                             <span class="text-sm text-slate-400">@ ENSEEIHT</span>
                         </div>
                         <div class="p-4 bg-card rounded-lg border border-slate-700">
-                            <span class="block text-3xl font-bold text-primary">4+</span>
+                            <span class="block text-3xl font-bold text-primary">5+</span>
                             <span class="text-sm text-slate-400">Years</span>
                         </div>
                     </div>
@@ -194,57 +244,94 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl font-bold text-white">My Skills</h2>
-                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">The tools and technologies I use to bring projects to life.</p>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">The tools and technologies I use to bring projects to
+                    life.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- AI & Data -->
-                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-primary/50 transition fade-in">
-                    <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center text-indigo-400 mb-6">
+                <div
+                    class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-primary/50 transition fade-in">
+                    <div
+                        class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center text-indigo-400 mb-6">
                         <i class="fas fa-brain text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">AI & Data</h3>
-                    <p class="text-slate-400 text-sm mb-4">Currently focusing on RAG (Retrieval-Augmented Generation) architectures.</p>
+                    <p class="text-slate-400 text-sm mb-4">Currently focusing on RAG (Retrieval-Augmented Generation)
+                        architectures.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">RAG</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Machine Learning</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Scikit Learn</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Pandas</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Pytorch</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">TensorFlow</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Hugging Face</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">RAG</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Machine
+                            Learning</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Scikit
+                            Learn</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Pandas</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Pytorch</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">TensorFlow</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Hugging
+                            Face</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">VertexAI</span>
                     </div>
                 </div>
 
                 <!-- Languages -->
-                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-green-500/50 transition fade-in" style="transition-delay: 100ms;">
-                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400 mb-6">
+                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-green-500/50 transition fade-in"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400 mb-6">
                         <i class="fas fa-code text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">Programming</h3>
                     <p class="text-slate-400 text-sm mb-4">Versatile in multiple programming paradigms.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Java</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">C</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">JavaScript</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">TypeScript</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Python</span>                        
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Java</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">C</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">JavaScript</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">TypeScript</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Python</span>
                     </div>
                 </div>
 
                 <!-- Tools -->
-                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-purple-500/50 transition fade-in" style="transition-delay: 200ms;">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-6">
+                <div class="bg-card p-8 rounded-xl border border-slate-700 shadow-lg hover:border-purple-500/50 transition fade-in"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-6">
                         <i class="fas fa-tools text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
                     <p class="text-slate-400 text-sm mb-4">Development workflow and version control.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Git / GitHub</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">VS Code</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Linux</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Jupyter</span>
-                        <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Docker</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Git
+                            / GitHub</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">VS
+                            Code</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Linux</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Jupyter</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Docker</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Neo4J</span>
+                        <span
+                            class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full border border-slate-600">Eclipse</span>
+
                     </div>
                 </div>
             </div>
@@ -256,66 +343,90 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl font-bold text-white">Civic Engagement</h2>
-                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Committed to making a positive impact in my community through arts, sustainability, and sports.</p>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Committed to making a positive impact in my community
+                    through arts, sustainability, and sports.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <!-- Experience 1: Theatre -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full">
+                <div
+                    class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mr-4 group-hover:scale-110 transition">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mr-4 group-hover:scale-110 transition">
                             <i class="fas fa-masks-theater text-xl"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold text-white leading-tight">"Le procès de King-Kong"</h3>
-                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Interactive Theatre</span>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Interactive
+                                Theatre</span>
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed flex-grow">
-                        An action aimed at fighting against sexist and sexual violence. The play explores cases where perceptions of guilt are blurred. We portrayed the stories of Axel, Alex, and Omar during integration evenings to raise awareness.
+                        An action aimed at fighting against sexist and sexual violence. The play explores cases where
+                        perceptions of guilt are blurred. We portrayed the stories of Axel, Alex, and Omar during
+                        integration evenings to raise awareness.
                     </p>
-                    <a href="https://welcomedesk.univ-toulouse.fr/evenements/proces-king-kong-theatre-interactif-sur-vss" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    <a href="https://welcomedesk.univ-toulouse.fr/evenements/proces-king-kong-theatre-interactif-sur-vss"
+                        target="_blank"
+                        class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn
+                        More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
 
                 </div>
 
                 <!-- Experience 2: Climate Fresk -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full" style="transition-delay: 100ms;">
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full"
+                    style="transition-delay: 100ms;">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 mr-4 group-hover:scale-110 transition">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400 mr-4 group-hover:scale-110 transition">
                             <i class="fas fa-leaf text-xl"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold text-white leading-tight">"La Fresque du Climat"</h3>
-                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Sustainability Training</span>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">Sustainability
+                                Training</span>
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed flex-grow">
-                        The Fresco raises awareness without guilt. Through shared understanding of climate mechanisms, it fosters calm, collective discussions on actionable levers. Participants leave the workshop united and motivated.
+                        The Fresco raises awareness without guilt. Through shared understanding of climate mechanisms,
+                        it fosters calm, collective discussions on actionable levers. Participants leave the workshop
+                        united and motivated.
                     </p>
-                    <a href="https://fresqueduclimat.org/" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    <a href="https://fresqueduclimat.org/" target="_blank"
+                        class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn
+                        More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
                 </div>
 
                 <!-- Experience 3: Jeune Officiel -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full" style="transition-delay: 200ms;">
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full"
+                    style="transition-delay: 200ms;">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 mr-4 group-hover:scale-110 transition">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400 mr-4 group-hover:scale-110 transition">
                             <i class="fas fa-flag-checkered text-xl"></i>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold text-white leading-tight">"Jeune Officiel"</h3>
-                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">3 Years • Volunteering</span>
+                            <span class="text-xs text-primary font-semibold uppercase tracking-wide">3 Years •
+                                Volunteering</span>
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed flex-grow">
-                        Served as a volunteer referee for various sports events organised at the college level. Developed responsibility, impartiality, and decision-making skills in fast-paced environments.
+                        Served as a volunteer referee for various sports events organised at the college level.
+                        Developed responsibility, impartiality, and decision-making skills in fast-paced environments.
                     </p>
-                    <a href="https://www.unss.org/" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    <a href="https://www.unss.org/" target="_blank"
+                        class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn
+                        More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
                 </div>
                 <!-- Experience 4: Capitol du libre -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden">
+                <div
+                    class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 mr-4 group-hover:scale-110 transition">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 mr-4 group-hover:scale-110 transition">
                             <i class="fa-solid fa-laptop"></i>
                         </div>
                         <div>
@@ -324,14 +435,19 @@
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed flex-grow">
-                        I have filmed and edited conferences on open-source software and more broadly, anything that can be open within the digital domain, whether it's hardware or intellectual property.
+                        I have filmed and edited conferences on open-source software and more broadly, anything that can
+                        be open within the digital domain, whether it's hardware or intellectual property.
                     </p>
-                    <a href="https://capitoledulibre.org/" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    <a href="https://capitoledulibre.org/" target="_blank"
+                        class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn
+                        More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
                 </div>
                 <!-- Experience 4: Women7 -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden" style="transition-delay: 100ms;">
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden"
+                    style="transition-delay: 100ms;">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mr-4 group-hover:scale-110 transition">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mr-4 group-hover:scale-110 transition">
                             <i class="fa-solid fa-person-dress"></i>
                         </div>
                         <div>
@@ -340,15 +456,21 @@
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed flex-grow">
-                        Film made during a day organized for middle school girls to raise awareness about the engineering profession. With women being underrepresented in this field, the aim is to show them how fascinating it can be.
+                        Film made during a day organized for middle school girls to raise awareness about the
+                        engineering profession. With women being underrepresented in this field, the aim is to show them
+                        how fascinating it can be.
                     </p>
-                    <a href="https://www.enseeiht.fr/fr/actualites/women7.html" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    <a href="https://www.enseeiht.fr/fr/actualites/women7.html" target="_blank"
+                        class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn
+                        More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
 
                 </div>
                 <!-- Experience 3: GivMe  -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden" style="transition-delay: 200ms;">
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex flex-col hover:bg-slate-800 transition fade-in group h-full civic-extra hidden"
+                    style="transition-delay: 200ms;">
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center text-yellow-400 mr-4 group-hover:scale-110 transition">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center text-yellow-400 mr-4 group-hover:scale-110 transition">
                             <i class="fa-solid fa-children"></i>
                         </div>
                         <div>
@@ -357,15 +479,20 @@
                         </div>
                     </div>
                     <p class="text-slate-400 text-sm leading-relaxed flex-grow">
-                        We set up a live stream and a control room with 6 cameras for a charity concert organized for children with mitochondrial disease.
+                        We set up a live stream and a control room with 6 cameras for a charity concert organized for
+                        children with mitochondrial disease.
                     </p>
-                    <a href="https://www.enseeiht.fr/fr/actualites/women7.html" target="_blank" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
+                    <a href="https://www.enseeiht.fr/fr/actualites/women7.html" target="_blank"
+                        class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition mt-4">Learn
+                        More <i class="fas fa-external-link-alt ml-1 text-xs"></i></a>
 
                 </div>
 
             </div>
             <div class="text-center mt-8">
-                <button id="show-more-civic" class="px-6 py-3 bg-primary text-white rounded-full hover:bg-indigo-600 transition">Show More +</button>
+                <button id="show-more-civic"
+                    class="px-6 py-3 bg-primary text-white rounded-full hover:bg-indigo-600 transition">Show More
+                    +</button>
             </div>
         </div>
     </section>
@@ -380,23 +507,31 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl font-bold text-white">International Mobility</h2>
-                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Exploring the world, adapting to new cultures, and expanding horizons.</p>
-                
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Exploring the world, adapting to new cultures, and
+                    expanding horizons.</p>
+
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
-                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300">
-                    <div class="inline-block p-3 rounded-full bg-orange-500/20 text-orange-400 mb-4 group-hover:scale-110 transition">
+                <div id="australia-card" onclick="document.getElementById('australia-modal').classList.remove('hidden')"
+                    class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300 cursor-pointer hover:border-orange-500/50">
+                    <div
+                        class="inline-block p-3 rounded-full bg-orange-500/20 text-orange-400 mb-4 group-hover:scale-110 transition">
                         <i class="fas fa-plane-departure text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Australia (1 Year)</h3>
-                    <p class="text-slate-400 text-sm">Worked in gold mines and completed an internship at <strong>Knowz</strong>. Adapted to a new environment and work culture.</p>
+                    <p class="text-slate-400 text-sm">Worked in gold mines and completed an internship at
+                        <strong>Knowz</strong>. Adapted to a new environment and work culture.
+                    </p>
+                    <p class="text-orange-400 text-xs mt-3 font-medium">Click to learn more →</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300" style="transition-delay: 100ms;">
-                    <div class="inline-block p-3 rounded-full bg-teal-500/20 text-teal-400 mb-4 group-hover:scale-110 transition">
+                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="inline-block p-3 rounded-full bg-teal-500/20 text-teal-400 mb-4 group-hover:scale-110 transition">
                         <i class="fas fa-language text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Languages</h3>
@@ -408,12 +543,15 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300" style="transition-delay: 200ms;">
-                    <div class="inline-block p-3 rounded-full bg-cyan-500/20 text-cyan-400 mb-4 group-hover:scale-110 transition">
+                <div class="bg-card/80 backdrop-blur-sm p-6 rounded-xl border border-slate-700 fade-in text-center group hover:-translate-y-1 transition duration-300"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="inline-block p-3 rounded-full bg-cyan-500/20 text-cyan-400 mb-4 group-hover:scale-110 transition">
                         <i class="fas fa-suitcase text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2">Adaptability</h3>
-                    <p class="text-slate-400 text-sm">Comfortable working in multicultural teams. Strong experience in diverse professional settings.</p>
+                    <p class="text-slate-400 text-sm">Comfortable working in multicultural teams. Strong experience in
+                        diverse professional settings.</p>
                 </div>
             </div>
         </div>
@@ -429,33 +567,42 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Hobby 1 -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group">
-                    <div class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
+                <div
+                    class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group">
+                    <div
+                        class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
                         <i class="fas fa-basketball-ball text-2xl"></i>
                     </div>
                     <div class="text-left">
                         <h3 class="text-lg font-bold text-white">Basketball</h3>
-                        <p class="text-slate-400 text-sm mt-1">15+ years of competition. Learned teamwork, discipline, and leadership.</p>
+                        <p class="text-slate-400 text-sm mt-1">15+ years of competition. Learned teamwork, discipline,
+                            and leadership.</p>
                     </div>
                 </div>
 
                 <!-- Hobby 2 -->
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
                         <i class="fas fa-plane text-2xl"></i>
                     </div>
                     <div class="text-left">
                         <h3 class="text-lg font-bold text-white">Travel</h3>
-                        <p class="text-slate-400 text-sm mt-1">Explored Taiwan, Japan, Cameroon, Australia, Thailand... Passionate about discovering new cultures.</p>
+                        <p class="text-slate-400 text-sm mt-1">Explored Taiwan, Japan, Cameroon, Australia, Thailand...
+                            Passionate about discovering new cultures.</p>
                     </div>
                 </div>
-                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group" style="transition-delay: 200ms;">
-                    <div class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
+                <div class="bg-card p-6 rounded-xl border border-slate-700 flex items-center space-x-6 hover:bg-slate-800 transition fade-in group"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 flex-shrink-0 bg-slate-700 rounded-full flex items-center justify-center text-white group-hover:bg-primary group-hover:scale-110 transition">
                         <i class="fa-solid fa-camera"></i>
                     </div>
                     <div class="text-left">
                         <h3 class="text-lg font-bold text-white">Video Editing</h3>
-                        <p class="text-slate-400 text-sm mt-1">I was vice president of the school's video editing club, and I developed a passion for storytelling through visual media.</p>
+                        <p class="text-slate-400 text-sm mt-1">I was vice president of the school's video editing club,
+                            and I developed a passion for storytelling through visual media.</p>
                     </div>
                 </div>
             </div>
@@ -472,21 +619,25 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <article class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group">
+                <article
+                    class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group">
                     <div class="relative h-48 overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://placehold.co/600x400/333/fff?text=RAG+Chatbot" alt="Project 1" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <img src="https://placehold.co/600x400/333/fff?text=RAG+Chatbot" alt="Project 1"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
                         <div class="text-xs font-bold text-primary uppercase mb-2 tracking-wider">AI / NLP</div>
                         <h3 class="text-xl font-bold text-white mb-2">RAG Architecture</h3>
-                        <p class="text-slate-400 mb-4 text-sm">Implementation of a Retrieval-Augmented Generation system using Python.</p>
+                        <p class="text-slate-400 mb-4 text-sm">Implementation of a Retrieval-Augmented Generation system
+                            using Python.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-slate-700">
                             <div class="flex space-x-3 text-lg">
                                 <i class="fab fa-python text-yellow-500" title="Python"></i>
                                 <i class="fas fa-brain text-blue-500" title="AI"></i>
                             </div>
-                            <a href="#" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
+                            <a href="#"
+                                class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
                                 View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
                             </a>
                         </div>
@@ -494,20 +645,25 @@
                 </article>
 
                 <!-- Project 2 -->
-                <article class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group" style="transition-delay: 100ms;">
+                <article
+                    class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group"
+                    style="transition-delay: 100ms;">
                     <div class="relative h-48 overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://placehold.co/600x400/4F46E5/fff?text=Java+App" alt="Project 2" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <img src="https://placehold.co/600x400/4F46E5/fff?text=Java+App" alt="Project 2"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
                         <div class="text-xs font-bold text-primary uppercase mb-2 tracking-wider">Software</div>
                         <h3 class="text-xl font-bold text-white mb-2">Java Application</h3>
-                        <p class="text-slate-400 mb-4 text-sm">Complex algorithm implementation and data processing in Java.</p>
+                        <p class="text-slate-400 mb-4 text-sm">Complex algorithm implementation and data processing in
+                            Java.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-slate-700">
                             <div class="flex space-x-3 text-lg">
                                 <i class="fab fa-java text-orange-500" title="Java"></i>
                             </div>
-                            <a href="#" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
+                            <a href="#"
+                                class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
                                 View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
                             </a>
                         </div>
@@ -515,10 +671,13 @@
                 </article>
 
                 <!-- Project 3 -->
-                <article class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group" style="transition-delay: 200ms;">
+                <article
+                    class="bg-card rounded-xl border border-slate-700 overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition transform hover:-translate-y-2 fade-in group"
+                    style="transition-delay: 200ms;">
                     <div class="relative h-48 overflow-hidden">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition z-10"></div>
-                        <img src="https://placehold.co/600x400/0f172a/fff?text=Web+Dashboard" alt="Project 3" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <img src="https://placehold.co/600x400/0f172a/fff?text=Web+Dashboard" alt="Project 3"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
                         <div class="text-xs font-bold text-primary uppercase mb-2 tracking-wider">Web</div>
@@ -529,7 +688,8 @@
                                 <i class="fab fa-react text-blue-400" title="React"></i>
                                 <i class="fab fa-js text-yellow-400" title="JavaScript"></i>
                             </div>
-                            <a href="#" class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
+                            <a href="#"
+                                class="text-sm font-semibold text-primary hover:text-indigo-400 flex items-center transition">
                                 View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
                             </a>
                         </div>
@@ -542,7 +702,9 @@
     <!-- Call to Action / Contact -->
     <section id="contact" class="py-20 bg-dark relative overflow-hidden">
         <!-- Decoration light -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-50 pointer-events-none">
+        </div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in relative z-10">
             <h2 class="text-3xl font-bold mb-4 text-white">Interested in collaborating?</h2>
@@ -550,34 +712,196 @@
                 I love discussing AI projects and technical challenges. Feel free to reach out.
             </p>
             <div class="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 shadow-2xl">
-                <form action="mailto:roure.matheo@gmail.com" method="post" enctype="text/plain" class="space-y-6 text-left">
+                <form action="mailto:roure.matheo@gmail.com" method="post" enctype="text/plain"
+                    class="space-y-6 text-left">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition" placeholder="Your name">
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                                placeholder="Your name">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition" placeholder="your@email.com">
+                            <input type="email"
+                                class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                                placeholder="your@email.com">
                         </div>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition" placeholder="How can I help you?"></textarea>
+                        <textarea rows="4"
+                            class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition"
+                            placeholder="How can I help you?"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-[1.02] shadow-lg shadow-indigo-500/30">
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-[1.02] shadow-lg shadow-indigo-500/30">
                         Send Message
                     </button>
                 </form>
             </div>
 
             <div class="mt-12 flex justify-center space-x-8">
-                <a href="mailto:contact@example.com" class="flex items-center text-slate-400 hover:text-white transition">
+                <a href="mailto:contact@example.com"
+                    class="flex items-center text-slate-400 hover:text-white transition">
                     <i class="fas fa-envelope mr-2"></i> roure.matheo@gmail.com
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- Australia Modal -->
+    <div id="australia-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"
+        style="background: rgba(0,0,0,0.85); backdrop-filter: blur(6px);">
+        <div
+            class="relative bg-slate-900 border border-slate-700 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <!-- Close button -->
+            <button onclick="document.getElementById('australia-modal').classList.add('hidden')"
+                class="absolute top-4 right-4 text-slate-400 hover:text-white transition text-xl z-10">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Header -->
+            <div
+                class="bg-gradient-to-r from-orange-500/20 to-yellow-500/10 p-8 rounded-t-2xl border-b border-slate-700">
+                <div class="flex items-center gap-4">
+                    <div class="p-4 rounded-full bg-orange-500/20 text-orange-400">
+                        <i class="fas fa-globe-asia text-3xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-white">Australia — Gap Year</h2>
+                        <p class="text-orange-400 mt-1 font-medium">1 year · 2024–2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-8 space-y-10">
+
+                <!-- Overview -->
+                <div>
+                    <p class="text-slate-300 leading-relaxed">
+                        After my engineering studies, I took a gap year in Australia — an experience that pushed me far
+                        outside my comfort zone. I spent a year balancing demanding physical work, a tech internship,
+                        and full cultural immersion in an English-speaking environment.
+                    </p>
+                </div>
+
+                <!-- Gold Mines -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-yellow-500/20 text-yellow-400">
+                            <i class="fas fa-hard-hat text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Gold Mines Work — Western Australia</h3>
+                            <h5 class="font-semibold text-light-blue">September 2024 - April 2025</h5>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        I worked in gold mines in the Outback, one of the most physically demanding environments
+                        imaginable. Temperatures could reach over 45°C, and shifts were long and intense.
+                    </p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-yellow-400 mt-1 flex-shrink-0"></i>Operated heavy machinery
+                            and
+                            handled ore processing tasks</li>
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-yellow-400 mt-1 flex-shrink-0"></i>Worked within strict
+                            safety
+                            protocols in a high-risk environment</li>
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-yellow-400 mt-1 flex-shrink-0"></i>Collaborated with
+                            multicultural teams under high-pressure conditions</li>
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-yellow-400 mt-1 flex-shrink-0"></i>Developed resilience,
+                            discipline, and adaptability</li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-slate-800"></div>
+
+                <!-- Knowz Internship -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-indigo-500/20 text-indigo-400">
+                            <i class="fas fa-laptop-code text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Internship at Knowz — Surfer Paradise</h3>
+                            <h5 class="font-semibold text-light-blue">April 2025 - June 2025</h5>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed mb-4">
+                        I joined <strong class="text-white">Knowz</strong>, an AI startup based in the Gold Coast,
+                        Australia as a
+                        software
+                        engineering intern. This experience gave me hands-on exposure to a fast-moving product team
+                        building AI-powered tools.
+                    </p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-indigo-400 mt-1 flex-shrink-0"></i>Contributed to the
+                            development of AI-driven features</li>
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-indigo-400 mt-1 flex-shrink-0"></i>Worked in an agile
+                            environment with daily standups and sprint planning</li>
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-indigo-400 mt-1 flex-shrink-0"></i>Collaborated directly with
+                            senior engineers and the product team</li>
+                        <li class="flex items-start gap-2"><i
+                                class="fas fa-check text-indigo-400 mt-1 flex-shrink-0"></i>Improved technical
+                            communication skills in a fully English-speaking workplace</li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-slate-800"></div>
+
+                <!-- Key Takeaways -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="p-2 rounded-lg bg-teal-500/20 text-teal-400">
+                            <i class="fas fa-lightbulb text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">What I Took Away</h3>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+                            <p class="text-white font-semibold mb-1">English Fluency</p>
+                            <p class="text-slate-400 text-sm">Living and working entirely in English brought my level
+                                from B2 to a confident professional level.</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+                            <p class="text-white font-semibold mb-1">Autonomy</p>
+                            <p class="text-slate-400 text-sm">Managing my own visa, housing, finances, and career across
+                                the other side of the world built real independence.</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+                            <p class="text-white font-semibold mb-1">Resilience</p>
+                            <p class="text-slate-400 text-sm">Alternating between extreme physical labour and tech work
+                                taught me to adapt quickly to very different contexts.</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+                            <p class="text-white font-semibold mb-1">Global Perspective</p>
+                            <p class="text-slate-400 text-sm">Working with people from dozens of nationalities expanded
+                                my cultural awareness and team communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learn More CTA -->
+                <div class="flex justify-center pt-2 pb-2">
+                    <a href="australia.html"
+                        class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-semibold px-8 py-3 rounded-xl transition duration-200 shadow-lg shadow-orange-500/20">
+                        <i class="fas fa-arrow-right"></i>
+                        Full Australia Experience
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-black py-8 border-t border-slate-800">
@@ -635,7 +959,7 @@
             }
         });
 
-        document.getElementById('show-more-civic').addEventListener('click', function() {
+        document.getElementById('show-more-civic').addEventListener('click', function () {
             const extras = document.querySelectorAll('.civic-extra');
             const isHidden = extras[0] && extras[0].classList.contains('hidden');
             extras.forEach(el => {
@@ -653,7 +977,15 @@
             this.textContent = isHidden ? 'Show Less -' : 'Show More +';
         });
 
-        document.getElementById('show-more-australia').addEventListener('click', function() {
+        // Close Australia modal on Escape or backdrop click
+        document.getElementById('australia-modal').addEventListener('click', function (e) {
+            if (e.target === this) this.classList.add('hidden');
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') document.getElementById('australia-modal').classList.add('hidden');
+        });
+
+        document.getElementById('show-more-australia').addEventListener('click', function () {
             const extras = document.querySelectorAll('.australia-extra');
             const isHidden = extras[0] && extras[0].classList.contains('hidden');
             extras.forEach(el => {
@@ -672,4 +1004,5 @@
         });
     </script>
 </body>
+
 </html>

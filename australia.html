@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australia Experience — Matheo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#6366f1',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        card: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Picture grid placeholder styling */
+        .photo-slot {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 2px dashed #334155;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #475569;
+            font-size: 0.8rem;
+            gap: 8px;
+            min-height: 220px;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+        }
+
+        /* Timeline */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f97316;
+            border: 2px solid #020617;
+        }
+    </style>
+</head>
+
+<body class="bg-darker text-slate-300 font-sans antialiased selection:bg-primary selection:text-white">
+
+    <!-- Back button nav -->
+    <nav class="fixed w-full z-50 bg-darker/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition text-sm font-medium">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+            <span class="text-orange-400 font-semibold text-sm tracking-wide uppercase">Australia · 2024–2025</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-darker to-darker pointer-events-none">
+        </div>
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-orange-500/10 rounded-full blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in">
+            <div
+                class="inline-flex items-center gap-2 bg-orange-500/15 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                <i class="fas fa-map-marker-alt"></i>
+                Australia
+            </div>
+            <h1 class="text-5xl font-bold text-white mb-4">My Year in Australia</h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                A gap year that took me from the heat of gold mines in the Outback in Kalgoorlie to the offices of an AI
+                startup in
+                Surfer Paradise — two worlds, one unforgettable year.
+            </p>
+
+            <!-- Stats -->
+            <div class="mt-12 grid grid-cols-3 gap-6 max-w-lg mx-auto">
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-4">
+                    <p class="text-3xl font-bold text-orange-400">12</p>
+                    <p class="text-slate-400 text-sm mt-1">Months abroad</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-4">
+                    <p class="text-3xl font-bold text-orange-400">5</p>
+                    <p class="text-slate-400 text-sm mt-1">Major experiences</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-4">
+                    <p class="text-3xl font-bold text-orange-400">∞</p>
+                    <p class="text-slate-400 text-sm mt-1">Memories made</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery — Hero photos -->
+    <section class="py-10 bg-dark/40">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-in">
+                <!-- Replace src with your actual image paths -->
+                <div class="photo-slot col-span-2 md:col-span-1" style="min-height:280px;">
+                    <!-- <img src="images/australia-1.jpg" alt="Australia 1"> -->
+                    <i class="fas fa-image text-2xl"></i>
+                    <span>Add photo here</span>
+                </div>
+                <div class="photo-slot" style="min-height:280px;">
+                    <!-- <img src="images/australia-2.jpg" alt="Australia 2"> -->
+                    <i class="fas fa-image text-2xl"></i>
+                    <span>Add photo here</span>
+                </div>
+                <div class="photo-slot" style="min-height:280px;">
+                    <!-- <img src="images/australia-3.jpg" alt="Australia 3"> -->
+                    <i class="fas fa-image text-2xl"></i>
+                    <span>Add photo here</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gold Mines Section -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section label -->
+            <div class="flex items-center gap-4 mb-10 fade-in">
+                <div class="p-3 rounded-xl bg-yellow-500/15 text-yellow-400">
+                    <i class="fas fa-hard-hat text-2xl"></i>
+                </div>
+                <div>
+                    <p class="text-yellow-400 text-sm font-semibold uppercase tracking-widest">Chapter 01</p>
+                    <h2 class="text-3xl font-bold text-white">Working in Gold Mines</h2>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="fade-in space-y-5 text-slate-400 leading-relaxed">
+                    <p>
+                        My first months in Australia were nothing like I imagined. I headed to Western Australia to work
+                        in the gold mines — a decision driven by curiosity, the need to fund my stay, and the desire to
+                        experience something truly different.
+                    </p>
+                    <p>
+                        The Outback is brutal and beautiful at the same time. Temperatures regularly exceeded <span
+                            class="text-white font-medium">45°C</span>, shifts started before sunrise, and the work was
+                        relentlessly physical. There was no room for shortcuts — safety protocols were strict and every
+                        person on site relied on each other.
+                    </p>
+                    <p>
+                        I worked alongside people from all over the world — Australians, Filipinos, South Africans, New
+                        Zealanders — which turned every day into a small cultural lesson in itself.
+                    </p>
+
+                    <!-- Key facts -->
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+                            <p class="text-yellow-400 text-xl font-bold mb-1">45°C+</p>
+                            <p class="text-slate-400 text-sm">Peak temperatures on site</p>
+                        </div>
+                        <div class="bg-slate-800/60 rounded-xl p-4 border border-slate-700">
+                            <p class="text-yellow-400 text-xl font-bold mb-1">10h+</p>
+                            <p class="text-slate-400 text-sm">Daily shifts in the field</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo grid for mines -->
+                <div class="grid grid-cols-2 gap-4 fade-in">
+                    <div class="photo-slot col-span-2" style="min-height:200px;">
+                        <!-- <img src="images/mine-1.jpg" alt="Gold Mine"> -->
+                        <i class="fas fa-image text-2xl"></i>
+                        <span>Add mine photo</span>
+                    </div>
+                    <div class="photo-slot" style="min-height:160px;">
+                        <!-- <img src="images/mine-2.jpg" alt="Outback"> -->
+                        <i class="fas fa-image text-2xl"></i>
+                        <span>Add photo</span>
+                    </div>
+                    <div class="photo-slot" style="min-height:160px;">
+                        <!-- <img src="images/mine-3.jpg" alt="Outback 2"> -->
+                        <i class="fas fa-image text-2xl"></i>
+                        <span>Add photo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills gained -->
+            <div class="mt-12 fade-in">
+                <p class="text-slate-500 text-sm uppercase tracking-widest font-semibold mb-4">Skills &amp; lessons</p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-4 py-2 rounded-full text-sm">Physical
+                        endurance</span>
+                    <span
+                        class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-4 py-2 rounded-full text-sm">Safety
+                        culture</span>
+                    <span
+                        class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-4 py-2 rounded-full text-sm">Team
+                        reliability</span>
+                    <span
+                        class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-4 py-2 rounded-full text-sm">Multicultural
+                        work</span>
+                    <span
+                        class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-4 py-2 rounded-full text-sm">Stress
+                        management</span>
+                    <span
+                        class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-4 py-2 rounded-full text-sm">Autonomy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="border-t border-slate-800"></div>
+    </div>
+
+    <!-- Knowz Internship Section -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-4 mb-10 fade-in">
+                <div class="p-3 rounded-xl bg-indigo-500/15 text-indigo-400">
+                    <i class="fas fa-laptop-code text-2xl"></i>
+                </div>
+                <div>
+                    <p class="text-indigo-400 text-sm font-semibold uppercase tracking-widest">Chapter 02</p>
+                    <h2 class="text-3xl font-bold text-white">Internship at Knowz — Surfer Paradise</h2>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Photo grid for Knowz -->
+                <div class="grid grid-cols-2 gap-4 fade-in order-2 md:order-1">
+                    <div class="photo-slot col-span-2" style="min-height:200px;">
+                        <!-- <img src="images/knowz-1.jpg" alt="Knowz Office"> -->
+                        <i class="fas fa-image text-2xl"></i>
+                        <span>Add Knowz photo</span>
+                    </div>
+                    <div class="photo-slot" style="min-height:160px;">
+                        <!-- <img src="images/sydney-1.jpg" alt="Sydney"> -->
+                        <i class="fas fa-image text-2xl"></i>
+                        <span>Add photo</span>
+                    </div>
+                    <div class="photo-slot" style="min-height:160px;">
+                        <!-- <img src="images/sydney-2.jpg" alt="Sydney 2"> -->
+                        <i class="fas fa-image text-2xl"></i>
+                        <span>Add photo</span>
+                    </div>
+                </div>
+
+                <div class="fade-in space-y-5 text-slate-400 leading-relaxed order-1 md:order-2">
+                    <p>
+                        After the mines, I moved to the <span class="text-white font-semibold">Est-Coast</span> and
+                        joined <span class="text-white font-semibold">Knowz</span>, an AI
+                        startup building tools that help
+                        people find and understand information faster. It was a complete change of environment: open
+                        office, sprints, product meetings, and a team that moved fast.
+                    </p>
+                    <p>
+                        During my 3-month internship, I took ownership of an innovative feature: <span
+                            class="text-white font-semibold">an AI assistant that automatically generates no-code
+                            workflows</span> from
+                        simple user instructions. This required diving deep into prompt engineering—translating business
+                        logic into
+                        effective prompts and guiding the AI's step-by-step reasoning.
+                    </p>
+                    <p>
+                        Working closely with the CTO, Ignacio Diaz, and my colleague Taïna Delhaye, I learned how to
+                        ship quickly, deal
+                        with ambiguity, and bridge the gap between complex AI behavior and user-friendly product design.
+                        The entire
+                        codebase and all communication was in English, which dramatically accelerated my technical
+                        fluency.
+                    </p>
+
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-5 space-y-3">
+                        <p class="text-white font-semibold text-sm">What I worked on</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-circle-check text-indigo-400 mt-0.5 flex-shrink-0"></i>Designed a
+                                5-state finite state
+                                machine with contextual memory for the AI assistant</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-circle-check text-indigo-400 mt-0.5 flex-shrink-0"></i>Built an
+                                automatic JSON block
+                                generator to power the no-code interface</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-circle-check text-indigo-400 mt-0.5 flex-shrink-0"></i>Engineered
+                                complex prompts to
+                                simplify business logic without losing meaning</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-circle-check text-indigo-400 mt-0.5 flex-shrink-0"></i>Conducted
+                                product discussions,
+                                testing, and use-case analysis directly with the CTO</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-circle-check text-indigo-400 mt-0.5 flex-shrink-0"></i>Wrote technical
+                                documentation
+                                and communicated entirely in English</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 fade-in">
+                <p class="text-slate-500 text-sm uppercase tracking-widest font-semibold mb-4">Tech &amp; environment
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-2 rounded-full text-sm">Prompt
+                        Engineering</span>
+                    <span
+                        class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-2 rounded-full text-sm">State
+                        Machines</span>
+                    <span
+                        class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-2 rounded-full text-sm">JSON
+                        generation</span>
+                    <span
+                        class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-2 rounded-full text-sm">TypeScript</span>
+                    <span
+                        class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-2 rounded-full text-sm">React
+                        / Node.js</span>
+                    <span
+                        class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-4 py-2 rounded-full text-sm">Agile
+                        / Scrum</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="border-t border-slate-800"></div>
+    </div>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-dark/30">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 fade-in">
+                <h2 class="text-3xl font-bold text-white">Year at a Glance</h2>
+                <p class="text-slate-400 mt-3">How the 12 months unfolded.</p>
+            </div>
+            <div class="relative border-l-2 border-slate-700 ml-4 space-y-10">
+                <div class="relative pl-8 fade-in timeline-item">
+                    <p class="text-orange-400 text-sm font-semibold mb-1">Month 1–2</p>
+                    <h3 class="text-white font-bold text-lg">Arrival &amp; Setup</h3>
+                    <p class="text-slate-400 text-sm mt-1">Landed in Perth. Sorted housing, opened a bank account,
+                        buying a car, and started
+                        navigated bureaucracy entirely in English. First shock of total immersion.</p>
+                </div>
+                <div class="relative pl-8 fade-in timeline-item">
+                    <p class="text-orange-400 text-sm font-semibold mb-1">Month 2–6</p>
+                    <h3 class="text-white font-bold text-lg">Gold Mine Work — Outback</h3>
+                    <p class="text-slate-400 text-sm mt-1">Headed inland to work on a mine site. Physically demanding,
+                        mentally rewarding. Saved enough to fund the rest of the year.</p>
+                </div>
+                <div class="relative pl-8 fade-in timeline-item">
+                    <p class="text-orange-400 text-sm font-semibold mb-1">Month 6–7</p>
+                    <h3 class="text-white font-bold text-lg">Exploration &amp; Job Hunt</h3>
+                    <p class="text-slate-400 text-sm mt-1">Traveled along the East Coast — Melbourne, Brisbane, Sydney.
+                        Started applying for tech internships.</p>
+                </div>
+                <div class="relative pl-8 fade-in timeline-item">
+                    <p class="text-orange-400 text-sm font-semibold mb-1">Month 7–12</p>
+                    <h3 class="text-white font-bold text-lg">Internship at Knowz — Sydney</h3>
+                    <p class="text-slate-400 text-sm mt-1">Joined the Knowz team. Worked as a software engineering
+                        intern in a fast-paced AI startup environment until the end of my visa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="border-t border-slate-800"></div>
+    </div>
+
+    <!-- Takeaways -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 fade-in">
+                <h2 class="text-3xl font-bold text-white">What I Took Away</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-6 fade-in">
+                    <div class="text-orange-400 text-2xl mb-4"><i class="fas fa-language"></i></div>
+                    <h3 class="text-white font-bold mb-2">English Fluency</h3>
+                    <p class="text-slate-400 text-sm">Living entirely in English for a year brought my level to a
+                        confident professional standard — both written and spoken.</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-6 fade-in" style="transition-delay: 80ms">
+                    <div class="text-orange-400 text-2xl mb-4"><i class="fas fa-person-running"></i></div>
+                    <h3 class="text-white font-bold mb-2">Resilience</h3>
+                    <p class="text-slate-400 text-sm">Going from extreme physical labour to a tech internship forced me
+                        to adapt constantly. I became comfortable in discomfort.</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-6 fade-in" style="transition-delay: 160ms">
+                    <div class="text-orange-400 text-2xl mb-4"><i class="fas fa-user-shield"></i></div>
+                    <h3 class="text-white font-bold mb-2">Full Autonomy</h3>
+                    <p class="text-slate-400 text-sm">Managing visa, finances, housing, and career across the globe with
+                        no safety net built real independence.</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-6 fade-in" style="transition-delay: 240ms">
+                    <div class="text-orange-400 text-2xl mb-4"><i class="fas fa-earth-asia"></i></div>
+                    <h3 class="text-white font-bold mb-2">Cultural Intelligence</h3>
+                    <p class="text-slate-400 text-sm">Working with dozens of nationalities in two very different
+                        environments sharpened my cross-cultural communication.</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-6 fade-in" style="transition-delay: 320ms">
+                    <div class="text-orange-400 text-2xl mb-4"><i class="fas fa-bolt"></i></div>
+                    <h3 class="text-white font-bold mb-2">Startup Mindset</h3>
+                    <p class="text-slate-400 text-sm">Knowz taught me to move fast, own my work, and ship without
+                        waiting for perfect conditions.</p>
+                </div>
+                <div class="bg-card/60 border border-slate-700 rounded-xl p-6 fade-in" style="transition-delay: 400ms">
+                    <div class="text-orange-400 text-2xl mb-4"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-white font-bold mb-2">Life Perspective</h3>
+                    <p class="text-slate-400 text-sm">A year away changed how I see work, ambition, and what matters.
+                        Some lessons only come from doing things the hard way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Photos -->
+    <section class="py-10 bg-dark/40">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-slate-500 text-sm uppercase tracking-widest font-semibold mb-6 fade-in">More photos</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
+                <div class="photo-slot" style="min-height:180px;">
+                    <!-- <img src="images/aus-extra-1.jpg" alt=""> -->
+                    <i class="fas fa-image text-xl"></i>
+                    <span>Add photo</span>
+                </div>
+                <div class="photo-slot" style="min-height:180px;">
+                    <!-- <img src="images/aus-extra-2.jpg" alt=""> -->
+                    <i class="fas fa-image text-xl"></i>
+                    <span>Add photo</span>
+                </div>
+                <div class="photo-slot" style="min-height:180px;">
+                    <!-- <img src="images/aus-extra-3.jpg" alt=""> -->
+                    <i class="fas fa-image text-xl"></i>
+                    <span>Add photo</span>
+                </div>
+                <div class="photo-slot" style="min-height:180px;">
+                    <!-- <img src="images/aus-extra-4.jpg" alt=""> -->
+                    <i class="fas fa-image text-xl"></i>
+                    <span>Add photo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back CTA -->
+    <section class="py-16 text-center">
+        <a href="index.html"
+            class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition font-medium">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+    </section>
+
+    <footer class="bg-black py-8 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm">&copy; 2025 matheo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
